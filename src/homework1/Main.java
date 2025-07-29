@@ -30,8 +30,9 @@ public class Main {
 
         if (sideA > 0 && sideB > 0 && sideC > 0) {
             if (sideA + sideB > sideC && sideB + sideC > sideA && sideA + sideC > sideB) {
-                int perimeter = sideA + sideB + sideC;
-                int area = sideA * sideB * sideC; //TODO: ДА НАМЕРЯ ФОРМУЛАТА ЗА ЛИЦЕ ПО 3 СТРАНИ
+                double perimeter = sideA + sideB + sideC;
+                double semiPerimeter = perimeter/2;
+                double area = Math.sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC));
                 System.out.println("The perimeter of the triangle is: " + perimeter);
                 System.out.println("The area of the triangle is: " + area);
             } else {
