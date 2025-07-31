@@ -1,4 +1,4 @@
-package homework1;
+package Lecture1.homework1;
 
 import java.util.Scanner;
 
@@ -31,6 +31,7 @@ public class Main {
         if (sideA > 0 && sideB > 0 && sideC > 0) {
             if (sideA + sideB > sideC && sideB + sideC > sideA && sideA + sideC > sideB) {
                 double perimeter = sideA + sideB + sideC;
+                //За намиране на лицето използваме Херонова формула
                 double semiPerimeter = perimeter/2;
                 double area = Math.sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC));
                 System.out.println("The perimeter of the triangle is: " + perimeter);
