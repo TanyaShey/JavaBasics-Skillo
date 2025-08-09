@@ -11,6 +11,9 @@ public class Task7 {
         int attempts = 0;
 
         do {
+            if (attempts != 0) {
+                System.out.println("Please try again");
+            }
             System.out.println("Enter the guess");
             guess = sc.nextInt();
             if (number == guess) {
@@ -18,10 +21,8 @@ public class Task7 {
                 break;
             } else if (number > guess) {
                 System.out.println("Number is higher");
-                System.out.println("Please try again");
             } else {
                 System.out.println("Number is lower");
-                System.out.println("Please try again");
             }
 
             attempts++;
